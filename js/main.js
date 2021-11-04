@@ -26,10 +26,10 @@ price = document.querySelector('.value-mony'),
 deleteBtn = document.querySelector('.delete'),
 checkoutBtn = document.querySelector('.check')
 photoSrc = [
-    'images/image-product-1.jpg',
-    'images/image-product-2.jpg',
-    'images/image-product-3.jpg',
-    'images/image-product-4.jpg',
+    '..images/image-product-1.jpg',
+    '..images/image-product-2.jpg',
+    '..images/image-product-3.jpg',
+    '..images/image-product-4.jpg',
 ];
 // Star elements status in locale storage
 
