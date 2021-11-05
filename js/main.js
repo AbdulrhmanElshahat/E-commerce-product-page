@@ -26,10 +26,10 @@ price = document.querySelector('.value-mony'),
 deleteBtn = document.querySelector('.delete'),
 checkoutBtn = document.querySelector('.check')
 photoSrc = [
-    '..images/image-product-1.jpg',
-    '..images/image-product-2.jpg',
-    '..images/image-product-3.jpg',
-    '..images/image-product-4.jpg',
+    'images/image-product-1.jpg',
+    'images/image-product-2.jpg',
+    'images/image-product-3.jpg',
+    'images/image-product-4.jpg',
 ];
 // Star elements status in locale storage
 
@@ -137,7 +137,13 @@ deleteBtn.onclick = function(){
 function nextPrevious(btn){
     btn.forEach(ele =>{
         ele.addEventListener('click', _=>{
-            let x = parseFloat(localStorage.bigPhoto) ; 
+            let x ;
+            if(localStorage.bigPhoto){
+                x = parseFloat(localStorage.bigPhoto) ;
+            }else{
+                x = 0
+            }
+             
             if(btn === nextBtn){x +=1; }else{x-=1;}
             if(x >= 0  && x<= photoSrc.length -1){ //not first photo or not last photo
                 localStorage.bigPhoto = x
